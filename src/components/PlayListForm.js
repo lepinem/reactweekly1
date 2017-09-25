@@ -58,13 +58,13 @@ export default class PlayListForm extends Component {
 
   _handleSubmit = (submit) => {
     submit.preventDefault();
-    let songData = {
+    let songInfo = {
       userName: this.state.userName,
       songArtist: this.state.songArtist,
       songTitle: this.state.songTitle,
       songNotes: this.state.songNotes
     }
-    this.props.addSong(this.state.songData)
+    this.props.addSong(this.state.songInfo)
   }
 
   render(){

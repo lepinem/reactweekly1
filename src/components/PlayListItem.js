@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 
-
 export default class PlayListItem extends Component {
   render(){
     const { songInfo } = this.props

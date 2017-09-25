@@ -1,3 +1,5 @@
+// App.js
+
 import React, { Component } from 'react';
 import '../styles/App.css';
 import NavBar from './NavBar'
@@ -22,8 +24,8 @@ class App extends Component {
     })
   }
 
-  _addSong = (songData) => {
-    addSong(songData).then((response) => {
+  _addSong = (songInfo) => {
+    addSong(songInfo).then((response) => {
       let playlist = this.state.playlist
       playlist.push(response.data)
       this.setState({ playlist: playlist })

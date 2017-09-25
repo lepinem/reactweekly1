@@ -10,8 +10,6 @@ import PlayListItem from './PlayListItem'
 export default class PlayList extends Component {
   render() {
     return(
-
-
       <div className="songlist">
         <div className="list-style">
           <button type="button" className="btn btn-success">Update List</button>
