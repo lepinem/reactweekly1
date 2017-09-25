@@ -1,5 +1,7 @@
 .App {
-  text-align: left;
+  /*text-align: left;*/
+  background: gray;
+  /*width: 100%;*/
 }
 
 .App-logo {
@@ -7,15 +9,32 @@
   height: 80px;
 }
 
-.App-header {
+.NavBar {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  /*height: 150px;
+  padding: 20px;*/
   color: white;
+  /*display: flex;
+  flex-direction: row;*/
+  width: 100%;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.comps {
+  /*display: flex;
+  flex-direction: row;*/
+
+}
+
+.plForm {
+
+}
+
+.plist {
+  background: gray;
 }
 
 @keyframes App-logo-spin {
@@ -24,6 +43,12 @@
 }
 
 .songForm {
+
+}
+
+.songlist {
+  background: gray;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+
 }

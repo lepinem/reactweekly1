@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../styles/App.css';
-// import NavBar from './NavBar'
+import NavBar from './NavBar'
 import PlayListForm from './PlayListForm';
 import PlayList from './PlayList';
 import { getAllSongs, addSong } from '../services'
@@ -34,17 +33,26 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div className="Nav">
+          <NavBar />
         </div>
         <div className="comps">
-          <PlayListForm
-            addNewSong={this._addSong}
-          />
-          {/* <PlayList
-            playlist={this.state.playlist}
-          /> */}
+          <div className="row">
+            <div className="col">
+              <div className="plForm">
+                <PlayListForm
+                addSong={this._addSong}
+                />
+              </div>
+            </div>
+            <div className="col">
+              <div className="plist">
+                <PlayList
+                  playlist={this.state.playlist}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     )

@@ -1,20 +1,18 @@
 //services.js
-
+//
 import axios from 'axios'
 
-const api = "https://tiny-lasagna-server.herokuapp.com/collections/playlisting"
-
 export function getAllSongs(){
-  return axios.get('api')
+  return axios.get('https://tiny-tiny.herokuapp.com/collections/playlisting')
 }
 
-export function addSong(song) {
-  return axios.post('api', {
-    song: {
-      userName: song.userName,
-      songArtist: song.songArtist,
-      songTitle: song.songTitle,
-      songNotes: song.songNotes
+export function addSong(songData) {
+  return axios.post('https://tiny-tiny.herokuapp.com/collections/playlisting', {
+    songData: {
+      userName: songData.userName,
+      songArtist: songData.songArtist,
+      songTitle: songData.songTitle,
+      songNotes: songData.songNotes
     }
   })
 }

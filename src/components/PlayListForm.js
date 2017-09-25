@@ -1,7 +1,7 @@
 // PlayListForm.js
 
 import React, { Component } from 'react'
-import { getPlaylistSongs, addToList } from '../services'
+// import { getPlaylistSongs, addToList } from '../services'
 
 // The state for your PlayListForm component should have userName, songArtist, songTitle, and songNotes in order to function properly with the fetch functions from the tinylasgna.js file that you will copy into the component. Follow the directions in that file.
 
@@ -26,7 +26,7 @@ export default class PlayListForm extends Component {
       });
       let listItem = JSON.stringify(this.state);
 
-      fetch("https://tiny-lasagna-server.herokuapp.com/collections/playlisting", {
+      fetch("http://tiny-tiny.herokuapp.com/collections/playlisting", {
         method: "POST",
         body: listItem,
         headers: {
@@ -40,7 +40,13 @@ export default class PlayListForm extends Component {
     }).catch(err => {
       console.log(err, "boo!");
     });
-    this.setState({userName: '', songNotes: '', songArtist: '', songTitle:''});
+
+    this.setState({
+      userName: '',
+      songTitle: '',
+      songArtist: '',
+      songNotes:''
+    })
   }
 
   _handleChange = (submit) => {
@@ -61,12 +67,10 @@ export default class PlayListForm extends Component {
     this.props.addSong(this.state.songData)
   }
 
-
-
   render(){
     return (
     <div className="songForm">
-      <div className="container w-50">
+      <div className="container">
         <form onSubmit={this._handleSubmit}>
           <div className="form-group">
             <label className="form-control-label" htmlFor="formGroupExampleInput">User Name:</label>
